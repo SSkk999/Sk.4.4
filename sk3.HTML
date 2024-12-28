@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .SK1 {
+            display: flex;
+            flex-wrap: wrap;
+            width: 670px;
+            height: 600px; 
+            position: relative;
+            overflow: hidden;
+        }
+        .SK2 {
+            flex: 50%; 
+            width: 400px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+        }
+        .text {
+            z-index: 2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .image {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; 
+        }
+        .DS {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            pointer-events: none;
+            z-index: 2; 
+        }
+        .SK2:hover .DS {
+            opacity: 1;
+        }
+        .SK2:hover .image {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="SK1">
+    <div class="SK2" style="background-image: url('/img/BD-Plaza-Gray-119-1-390x390.jpg');">
+        <div class="text">HELLO,WORLD!</div>
+        <div class="DS"></div>
+    </div>
+    <div class="SK2" style="background-image: url('/img/skggg.jpg');">
+        
+        <div class="DS"></div>
+    </div>
+    <div class="SK2" style="background-image: url('/img/skggg.jpg');">
+        
+        <div class="DS"></div>
+    </div>
+    <div class="SK2" style="background-image: url('/img/BD-Plaza-Gray-119-1-390x390.jpg');">
+        <div class="text">HELLO,WORLD!</div>
+        <div class="DS"></div>
+    </div>
+    <div class="SK2" style="background-image: url('/img/BD-Plaza-Gray-119-1-390x390.jpg');">
+        <div class="text">HELLO,WORLD!</div>
+        <div class="DS"></div>
+    </div>
+    <div class="SK2" style="background-image: url('/img/skggg.jpg');">
+        
+        <div class="DS"></div>
+    </div>
+</div>
+
+</body>
+</html>

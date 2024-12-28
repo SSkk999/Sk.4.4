@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 911px;
+            margin: 0;
+        }
+        .clock{
+            width: 150px;
+            height: 150px;
+            border: 2px solid red;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hand{
+            position: absolute;
+            background-color: black;
+            transform-origin: 50%  100%;
+            top: 50%;
+            left: 50%;
+        }
+        .minute-hand{
+            height: 60px;
+            width: 2px;
+
+        }
+        .hour-hand{
+            height: 40px;
+            width: 4px;
+
+
+        }
+        .point{
+            top: 47.5%;
+            left: 48%;
+            height: 7px;
+            width: 7px;
+            border-radius:50px;
+
+        }
+
+
+        @keyframes rotate-hour {
+            from {transform: translate(-50%,-100%)rotate(0deg);}
+            to {transform: translate(-50%,-100%)rotate(360deg);}
+        }
+        @keyframes rotate-minute {
+            from {transform: translate(-50%,-100%)rotate(0deg);}
+            to {transform: translate(-50%,-100%)rotate(360deg);}
+        }
+        .hour-hand{
+            animation: rotate-hour 43000s infinite linear;
+        }
+        .minute-hand{
+            animation: rotate-minute 60s infinite linear;
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+ </head>
+ <body>
+    
+    <div class="clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand point"></div>
+        
+
+
+
+
+
+
+
+
+    </div>
+ </body>
+ </html>
